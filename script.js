@@ -29,26 +29,22 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 // Exercise 3
 document.addEventListener('DOMContentLoaded', (event) => {
-    // Reference to all questions
     const questions = document.querySelectorAll('.question');
 
     questions.forEach((question, qIndex) => {
-        // Get the correct answer index from data attribute
         const correctIndex = parseInt(question.getAttribute('data-correct'), 10);
         const answers = question.querySelectorAll('.answer');
 
         answers.forEach((answer, aIndex) => {
             answer.addEventListener('click', () => {
-                // Check if the clicked answer is correct
                 if (aIndex === correctIndex) {
                     answer.classList.add('correct');
                 } else {
                     answer.classList.add('wrong');
                 }
 
-                // Disable all answers for the question
                 answers.forEach((ans, ansIndex) => {
-                    ans.style.pointerEvents = 'none'; // Disable further clicks
+                    ans.style.pointerEvents = 'none';
                     if (ansIndex === correctIndex) {
                         ans.classList.add('correct');
                     }
