@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide Div Example</title>
+    <style>
+        /* Exercise 2 */
+        #card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 16px;
+            max-width: 200px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin: 20px auto;
+        }
+        #card h2 {
+            margin: 0 0 8px 0;
+            font-size: 1.2em;
+        }
+        #card a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        #card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Exercise 3 */
+        .question {
+            margin: 20px 0;
+        }
+        .answer {
+            display: block;
+            margin: 5px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .answer.correct {
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+        }
+        .answer.wrong {
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+        }
+    </style>
+</head>
+<body>
+    <!-- Exercise 1 -->
+    <button id="myButton">Hide Text</button>
+    <div id="myDiv">This is a random text!</div>
+
+    <!-- Exercise 2 -->
+    <div id="container"></div>
+
+    <!-- Exercise 3 -->
+    <div id="quiz">
+        <div class="question" data-correct="2">
+            <div>What is the capital of Georgia?</div>
+            <div class="answer">Berlin</div>
+            <div class="answer">Madrid</div>
+            <div class="answer">Tbilisi</div>
+            <div class="answer">Rome</div>
+        </div>
+        <div class="question" data-correct="1">
+            <div>Which planet is known as the Red Planet?</div>
+            <div class="answer">Earth</div>
+            <div class="answer">Mars</div>
+            <div class="answer">Jupiter</div>
+            <div class="answer">Saturn</div>
+        </div>
+        <div class="question" data-correct="0">
+            <div>Who wrote 'Harry Potter'?</div>
+            <div class="answer">J.K. Rowling</div>
+            <div class="answer">Harper Lee</div>
+            <div class="answer">Ernest Hemingway</div>
+            <div class="answer">Mark Twain</div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>    
+    </body>
+</html>
